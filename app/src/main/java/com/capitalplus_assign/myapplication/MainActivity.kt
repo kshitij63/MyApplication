@@ -1,11 +1,10 @@
-package com.loktra_assign2.myapplication
+package com.capitalplus_assign.myapplication
 
-import android.animation.ObjectAnimator
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
@@ -13,8 +12,6 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.single_photo_view.view.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var adapter = FlickrAdapter(this@MainActivity, ArrayList<FlickrPhotoObject>())
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        recyclerView.layoutManager = LinearLayoutManager(this)
         var model = ViewModelProviders.of(this).get(FlickrViewModel::class.java)
         model.getPhotoList("tiger").observe(this, object : Observer<ArrayList<FlickrPhotoObject>> {
             override fun onChanged(t: ArrayList<FlickrPhotoObject>?) {

@@ -1,4 +1,4 @@
-package com.loktra_assign2.myapplication
+package com.capitalplus_assign.myapplication
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
@@ -9,7 +9,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 /**
- * Created by user on 4/30/2018.
+ * Created by user on 6/6/2018.
  */
 class FlickrViewModel : ViewModel() {
     var mutableLiveData = MutableLiveData<ArrayList<FlickrPhotoObject>>()
@@ -28,13 +28,19 @@ class FlickrViewModel : ViewModel() {
                         //     Log.e("response is : ", response!!.body().toString())
                         var displayPhotoList = ArrayList<FlickrPhotoObject>()
 
+                        var i = 0;
                         var photoList = response!!.body()!!.photos.photo
-                        for (i in 0..photoList.size - 1) {
+                        while (i + 1 < photoList.size - 1) {
                             var obj = photoList.get(i)
+                            var obj2 = photoList.get(i + 1)
                             var url = "https://farm${obj.farm}.staticflickr.com/${obj.server}/${obj.id}_${obj.secret}.jpg"
+                            var url2 = "https://farm${obj2.farm}.staticflickr.com/${obj2.server}/${obj2.id}_${obj2.secret}.jpg"
+
                             var title = obj.title
-                            var photObject = FlickrPhotoObject(url, title, false,null)
+                            var title2 = obj2.title
+                            var photObject = FlickrPhotoObject(url, title, false, url2, title2, false, false)
                             displayPhotoList.add(photObject)
+                            i = i + 2
                         }
                         mutableLiveData.postValue(displayPhotoList)
                     }

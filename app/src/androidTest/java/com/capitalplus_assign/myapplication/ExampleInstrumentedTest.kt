@@ -1,4 +1,4 @@
-package com.loktra_assign2.myapplication
+package com.capitalplus_assign.myapplication
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

@@ -1,14 +1,12 @@
-package com.loktra_assign2.myapplication
+package com.capitalplus_assign.myapplication
 
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
- * Created by user on 4/30/2018.
+ * Created by user on 6/6/2018.
  */
 class FlickrRetrofitClient {
 

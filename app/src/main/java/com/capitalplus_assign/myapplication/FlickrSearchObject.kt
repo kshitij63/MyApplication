@@ -1,9 +1,7 @@
-package com.loktra_assign2.myapplication
-
-import android.support.v7.widget.DialogTitle
+package com.capitalplus_assign.myapplication
 
 /**
- * Created by user on 4/30/2018.
+ * Created by user on 6/6/2018.
  */
 data class FlickrSearchObject(var id: String, var owner: String, var secret: String, var server: String
                               , var farm: Long, var title: String, var ispublic: Long)

@@ -1,10 +1,10 @@
-package com.loktra_assign2.myapplication
+package com.capitalplus_assign.myapplication
 
 import retrofit2.Call
 import retrofit2.http.*
 
 /**
- * Created by user on 4/30/2018.
+ * Created by user on 6/6/2018.
  */
 interface FlickrApiInterface {
 

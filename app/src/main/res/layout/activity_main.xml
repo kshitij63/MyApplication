@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.loktra_assign2.myapplication.MainActivity">
+    tools:context="com.capitalplus_assign.myapplication.MainActivity">
 
     <EditText
         android:id="@+id/edit"
